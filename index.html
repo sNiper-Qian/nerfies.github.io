@@ -258,31 +258,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            In this work, we introduce PianoMime, a framework to learn a generalist piano-playing agent from internet demonstrations.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            The internet is a promising source of large amounts of demonstrations to train our robot agents. 
+            In particular, for the case of piano-playing, Youtube is full of videos of professional pianists playing a wide myriad of songs.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            In our work, we leverage on these demonstrations to learn a generalist piano-playing agent that is able to play any arbitrary song.
+            Our framework is divided into three parts: a data preparation phase to extract the informative features from the Youtube videos,
+            a policy learning phase, to train song-specific expert policies from the demonstrations and a policy distillation phase, that distill the policies in a single generalist agent.
+            We explore different policy designs to represent the generalist agent and evaluate the influence of the amount of training data in the generalization capabilities of the agent.
+            We show that we are able to learn a policy with up to 70\% F1 score on unseen songs.
           </p>
         </div>
       </div>
